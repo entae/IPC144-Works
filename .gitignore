@@ -1,4 +1,11 @@
 # Visual Studio
+*
+!*.*
+!*/
+*.dYSM
+.DS_Store
+*.vscode/tasks.json
+
 *.sdf
 *.user
 *.suo
