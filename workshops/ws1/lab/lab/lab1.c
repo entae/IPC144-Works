@@ -6,6 +6,7 @@
 //
 
 #include <stdio.h>
+
 void title(void);
 void info(void);
 void line(void);
@@ -15,6 +16,8 @@ int main(void) {
     line();
     info();
     line();
+    
+    return 0;
 }
 
 void title(void) {
