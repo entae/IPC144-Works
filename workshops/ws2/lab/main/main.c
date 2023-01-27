@@ -5,8 +5,6 @@
 //  Created by Intae Chung on 2023-01-26.
 //
 
-#include <stdio.h>
-
 void title(void);
 void line(char fill, int length);
 void shoppingStats(void);
