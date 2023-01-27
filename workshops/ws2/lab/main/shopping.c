@@ -17,7 +17,7 @@ void shoppingStats(void) {
     int noOfItems;
     //the number of items
     int itm;
-    //counter for listing number of items
+    //to track the number of loops done
     float price;
     //float value for item prices
     float total;
@@ -25,6 +25,8 @@ void shoppingStats(void) {
     float avg;
     //float for average price of items
     
+    printf("Money Spending Calculator\n");
+    line('=',25);
     printf("How many items were bought?\n");
     printf("> ");
     scanf("%d", &noOfItems);
