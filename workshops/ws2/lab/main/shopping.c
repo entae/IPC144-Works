@@ -21,7 +21,7 @@ void shoppingStats(int noOfItems) {
     printf("Please enter the price of the %d items bought...\n",noOfItems);
     loop = 0;
     sum = 0;
-    while (loop != noOfItems) {
+    while (loop < noOfItems) {
         printf("%d> ", loop+1);
         scanf("%lf", &price);
         loop++;
