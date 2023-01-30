@@ -25,17 +25,17 @@ void rectangle(char leftTop, char top, char topRight,
     
     printf("%c",leftT);
     w = 0;
-    while (w < width) {
+    while (w < width-2) {
         printf("%c", t);
         w++;
     }
     printf("%c",rightT);
     printf("\n");
     h = 0;
-    while (h < height)  {
+    while (h < height-2)  {
         printf("%c",l);
         w = 0;
-        while (w < width) {
+        while (w < width-2) {
             printf("%c",f);
             w++;
         }
@@ -45,7 +45,7 @@ void rectangle(char leftTop, char top, char topRight,
     }
     printf("%c",buttomL);
     w = 0;
-    while (w < width) {
+    while (w < width-2) {
         printf("%c", b);
         w++;
     }
