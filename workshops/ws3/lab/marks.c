@@ -39,13 +39,14 @@ int getNoOfStudents(void){
 
 int getAverage(int NumberOfStudents) {
     int loop;
-    int mark;
     int sum;
     int average;
     sum = 0;
     loop = 0;
     printf("Enter %d student marks...\n", NumberOfStudents);
+    
     while (loop < NumberOfStudents) {
+        int mark;
         printf("%d> ", loop+1);
         scanf("%d", &mark);
         
