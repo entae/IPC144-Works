@@ -92,7 +92,7 @@ double getDouble(void) {
         }
         else if (scanf("%lf%c", &dvalue, &ch) != 2 && ch != '\n') {
             flushKey();
-            printf("Enter only an Double, try again: ");
+            printf("Enter only a Double, try again: ");
         }
     }
     return dvalue;
@@ -117,7 +117,7 @@ double getDoubleMM(double min, double max) {
         }
         else if (scanf("%lf%c", &dvalue, &ch) != 2 && ch != '\n') {
             flushKey();
-            printf("Enter only an Double, try again: ");
+            printf("Enter only a Double, try again: ");
         }
     }
     return dvalue;
