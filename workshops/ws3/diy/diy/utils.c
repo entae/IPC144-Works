@@ -108,7 +108,7 @@ double getDoubleMM(double min, double max) {
             if (dvalue <= max && dvalue >= min) {
                 done = 1;
             } else {
-                printf("[%d<=Number<=%d], try again: ", min, max);
+                printf("[%lf<=Number<=%lf], try again: ", min, max);
             }
         }
         else if (scanf("%lf%c", &dvalue, &ch) != 2 && dvalue == 0) {
