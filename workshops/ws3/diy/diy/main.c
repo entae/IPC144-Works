@@ -28,12 +28,12 @@ int main(void) {
 
    printf("Enter a double value: ");
    dvalue = getDouble();
-   printf("You entered: %.2lf\n", dvalue);
+   printf("You entered: %.1lf\n", dvalue);
    line('*', 50);
 
    printf("Enter a double value between 10.1 and 20.1 inclusive: ");
    dvalue = getDoubleMM(10.1, 20.1);
-   printf("You entered: %.2lf\n", dvalue);
+   printf("You entered: %.1lf\n", dvalue);
    line('*', 50);
 
    return 0;
