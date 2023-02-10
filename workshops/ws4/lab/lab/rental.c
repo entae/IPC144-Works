@@ -23,6 +23,7 @@ void menu(void) {
 
 double rent(int sku) {
     double price;
+    menu();
     switch (sku) {
         case 101:
             price = 12.30;
