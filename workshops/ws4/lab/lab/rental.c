@@ -51,7 +51,7 @@ double rent(int sku) {
         case 0:
             break;
         default:
-            printf("Invalid Selection!\n");
+            printf("Invalid Selection! \n");
             price = 0.0;
             break;
     }
