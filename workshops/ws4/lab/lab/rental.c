@@ -34,15 +34,15 @@ double rent(int sku) {
             break;
         case 203:
             price = 2.99;
-            printf("Poles ............. 2.99$\n");
+            printf("Poles ............ 2.99$\n");
             break;
         case 204:
             price = 3.99;
-            printf("Helmet ............ 3.99$\n");
+            printf("Helmet ........... 3.99$\n");
             break;
         case 305:
             price = 14.30;
-            printf("Winter Pants ..... 14.30$\n");
+            printf("Winter Pants .... 14.30$\n");
             break;
         case 306:
             price = 20.55;
