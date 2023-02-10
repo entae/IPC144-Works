@@ -48,6 +48,8 @@ double rent(int sku) {
             price = 20.55;
             printf("Winter Jacket .... 20.55$\n");
             break;
+        case 0:
+            break;
         default:
             printf("Invalid Selection!\n");
             price = 0.0;
@@ -59,18 +61,18 @@ double rent(int sku) {
 void rental(void) {
     int receivedSKU;
     double rentalPrice;
-    double finalPrice;
+    double finalPrice = 0;
     menu();
     do {
         printf("Enter Sku or 0 to exit: ");
-        receivedSKU = getInt();
-        rentalPrice = rent(receivedSKU);
-        finalPrice += rentalPrice;
+            receivedSKU = getInt();
+            rentalPrice = rent(receivedSKU);
+            finalPrice += rentalPrice;
     } while (receivedSKU != 0);
     
     line('-',28);
     printf("Total price:      %.2lf\n",finalPrice);
-    printf("Tax:              %.2lf\n",finalPrice*.13);
-    printf("Total + Tax:      %.2lf\n",finalPrice+finalPrice*.13);
+    printf("Tax:               %.2lf\n",finalPrice*.13);
+    printf("Total + Tax:      %.2lf$\n",finalPrice+finalPrice*.13);
     line('*',28);
 }
