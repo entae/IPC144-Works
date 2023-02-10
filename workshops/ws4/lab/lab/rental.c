@@ -60,6 +60,7 @@ void rental(void) {
     int receivedSKU;
     double rentalPrice;
     double finalPrice;
+    menu();
     do {
         printf("Enter Sku or 0 to exit: ");
         receivedSKU = getInt();
