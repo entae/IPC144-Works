@@ -73,7 +73,7 @@ int calc() {
                         line('-',lnLength);
                         break;
                     default:
-                        printf("'%c' is not a valid operation, (only +,-,/,x,%% and ^ are acceptable\n", op);
+                        printf("'%c' is not a valid operation, (only +,-,/,x,%% and ^ are acceptable)\n", op);
                         break;
                 }
             }
