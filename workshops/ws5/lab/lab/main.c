@@ -50,9 +50,9 @@ int main(void) {
     for (i =0; i < noOfStudents; i++) {
             printf("%d:\n", i+1);
             printf("Student Number: ");
-                scanf("%d", studentNumbers[i]);
+                scanf("%d", &studentNumbers[i]);
             printf("Mark: ");
-                scanf("%d", marks[i]);
+                scanf("%d", &marks[i]);
         }
     
     // Call print report passing the received data.
