@@ -32,9 +32,9 @@ void printReport(const char subjectCode[], const int studentNumbers[],
     }
     avg = sum / noOfStudents;
     printf("  +--------+------+\n");
-    printf("  |Average |%6d|\n", avg);
-    printf("  |Highest |%6d|\n", high);
-    printf("  |Lowest  |%6d|\n", low);
+    printf("  |Average |%5d |\n", avg);
+    printf("  |Highest |%5d |\n", high);
+    printf("  |Lowest  |%5d |\n", low);
     printf("  +--------+------+\n");
 }
     
