@@ -33,7 +33,7 @@ int main(void) {
     const char subjectCode[10];
    printf("Enter subject Name: ");
    // read the subject name using scanf
-    scanf("%s", &subjectCode);
+    scanf("%s", subjectCode);
 
 
    printf("Enter the number of students (max 50): ");
@@ -50,9 +50,9 @@ int main(void) {
     for (i =0; i < noOfStudents; i++) {
             printf("%d:\n", i+1);
             printf("Student Number: ");
-                scanf("%d", &studentNumbers[i]);
+                scanf("%d", studentNumbers[i]);
             printf("Mark: ");
-                scanf("%d", &marks[i]);
+                scanf("%d", marks[i]);
         }
     
     // Call print report passing the received data.
