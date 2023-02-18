@@ -25,12 +25,12 @@ int main(void) {
 
    // create two integer arrays (size of 50) to hold the
    // marks and the student number of students.
-    const int marks[50];
-    const int studentNumbers[50];
+    int marks[50];
+    int studentNumbers[50];
     
    // add cString capable of holding 9 characters (+1 for null byte)
    // for the subject code
-    const char subjectCode[10];
+    char subjectCode[10];
    printf("Enter subject Name: ");
    // read the subject name using scanf
     scanf("%s", subjectCode);
