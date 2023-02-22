@@ -14,7 +14,7 @@ int main(void) {
    do {
       subjectMarksReport();
       printf(" Exit? ");
-   } while(!yes());
+   } while(yes());
 
    return 0;
 }
