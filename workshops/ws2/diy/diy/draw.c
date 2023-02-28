@@ -7,11 +7,21 @@
 
 #include <stdio.h>
 
+void line(char left, char middle , char right,int width) {
+   int w = 0;
+   putchar(right);
+   while(w < width - 2) {
+      putchar(middle);
+      w++;
+   }
+   putchar(left);
+   putchar('\n');
+}
 void rectangle(char leftTop, char top, char topRight,
                char right,char rightButtom, char buttom,
                char buttomLeft, char left, char fill,
                int width, int height) {
-    char leftT = leftTop;
+    char leftT = leftTop;  // no need for variables
     char t = top;
     char rightT = topRight;
     char r = right;
@@ -23,14 +33,7 @@ void rectangle(char leftTop, char top, char topRight,
     int w = width;
     int h = height;
     
-    printf("%c",leftT);
-    w = 0;
-    while (w < width-2) {
-        printf("%c", t);
-        w++;
-    }
-    printf("%c",rightT);
-    printf("\n");
+    line(leftT, t, rightT, width);
     h = 0;
     while (h < height-2)  {
         printf("%c",l);

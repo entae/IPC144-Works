@@ -28,5 +28,6 @@ void flushKey(void);
 int yes(void);
 char getSingleChar(void);
 void line(char fill, int len);
+void lineln(char fill, int len);
 
 #endif /* utils_h */

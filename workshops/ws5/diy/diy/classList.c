@@ -8,7 +8,17 @@
 #include<stdio.h>
 #include "classList.h"
 #include "utils.h"
-
+void getStudentInfo(int studentNumbers[], int marks[], int noOfStudents) {
+   int i;
+   printf("Please enter %d student marks:\n", noOfStudents);
+   for(i = 0; i < noOfStudents; i++) {
+      printf("%d of %d:\n", i + 1, noOfStudents);
+      printf("Student Number: ");
+      studentNumbers[i] = getMMInt(9999, 1000000, "Student Number");
+      printf("Mark: ");
+      marks[i] = getMMInt(0, 100, "Mark");
+   }
+}
 void subjectMarksReport(void) {
     char subjectCode[10];
     int studentNumbers[50];
@@ -20,15 +30,8 @@ void subjectMarksReport(void) {
     scanf("%s", subjectCode);
     printf("Enter Number of students (max 50): ");
     noOfStudents = getMMInt(1, 50, "Number of Students");
-    printf("Please enter %d student marks:\n", noOfStudents);
-    for (i =0; i < noOfStudents; i++) {
-            printf("%d of %d:\n", i+1, noOfStudents);
-            printf("Student Number: ");
-            studentNumbers[i] = getMMInt(9999, 1000000, "Student Number");
-            printf("Mark: ");
-            marks[i] = getMMInt(0,100, "Mark");
-        }
-    
+    getStudentInfo(studentNumbers, marks, noOfStudents);
+
         printf("\n");
         printf(" SUBJECT MARKS REPORT!\n"
                " +-------------------+\n");

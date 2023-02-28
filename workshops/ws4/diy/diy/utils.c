@@ -55,16 +55,16 @@ void line(char fill, int len) {
    }
    if(len > 0) putchar('\n');
 }
+void lineln(char fill, int len) {  // good thing to have
+   int i;
+   for(i = 0; i < len; i++) {
+      putchar(fill);
+   }
+   putchar('\n');
+}
 int yes(void) {
-   int res;
    char resp;
    printf("(Y)es or (N)o: ");
    resp = getSingleChar();
-   if (resp == 'Y' || resp == 'y') {
-      res = 1;
-   }
-   else {
-      res = 0;
-   }
-   return res;
+   return (resp == 'Y' || resp == 'y');
 }

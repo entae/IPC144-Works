@@ -10,54 +10,98 @@
 ***********************************************************************/
 #define _CRT_SECURE_NO_WARNINGS
 #include <stdio.h>
-#include "utils.h"
-char getSingleChar(void) {
-   char ch = getchar();
-   flushKey();
-   return ch;
+int getInt(void);
+int getIntMM(int min, int max);
+double getDouble(void);
+double getDoubleMM(double min, double max);
+void line(char fill, int len);
+
+void line(char fill, int len) {
+   int l;
+   char c = fill;
+   for(l = 0; l < len; l++) {
+      printf("%c", c);
+   }
+   putchar('\n');
 }
+
+void flushKey(void);
+
 int getInt(void) {
-   int value;
+   int value = 0;
    int done = 0;
-   while (!done) {
-      if (scanf("%d", &value) == 1) {
+   char ch;
+   while(!done) {
+      if(scanf("%d%c", &value, &ch) == 2 && ch == '\n') {
          done = 1;
-      }
-      else { // user enterd non integer
+      } else if(scanf("%d%c", &value, &ch) != 2 && value == 0) {
          flushKey();
          printf("Invalid Integer, try again: ");
+      } else if(scanf("%d%c", &value, &ch) != 2 && ch != '\n') {
+         flushKey();
+         printf("Enter only an integer, try again: ");
       }
    }
-   flushKey();
    return value;
 }
 
 void flushKey(void) {
    char ch = 'x';
-   while (ch != '\n') {
+   while(ch != '\n') {
       ch = getchar();
    }
 }
-
-int yes(void) {
-   int res;
-   char resp;
-   printf("(Y)es or (N)o: ");
-   resp = getSingleChar();
-   if (resp == 'Y' || resp == 'y') {
-      res = 1;
-   }
-   else {
-      res = 0;
-   }
-   return res;
+/// RRRRRRRRRRRRRRRRRRREUSE you code!!!!!!!
+int getIntMM(int min, int max) {
+   int value = 0;
+   int done = 0;
+   char ch;
+   do {
+      value = getInt();
+      if(value <= max && value >= min) 
+         printf("[%d<=Number<=%d], try again: ", min, max);
+   } while(value <= max && value >= min);
+            
+   return value;
 }
 
-void line(char fill, int length) {
-    int l;
-    char c = fill;
-    for (l = 0; l < length; l++) {
-        printf("%c", c);
-        }
-        putchar('\n');
-    }
+double getDouble(void) {
+   double dvalue = 0;
+   int done = 0;
+   char ch;
+   while(!done) {
+      if(scanf("%lf%c", &dvalue, &ch) == 2 && ch == '\n') {
+         done = 1;
+      } else if(scanf("%lf%c", &dvalue, &ch) != 2 && dvalue == 0) {
+         flushKey();
+         printf("Invalid Double, try again: ");
+      } else if(scanf("%lf%c", &dvalue, &ch) != 2 && ch != '\n') {
+         flushKey();
+         printf("Enter only a Double, try again: ");
+      }
+   }
+   return dvalue;
+}
+
+double getDoubleMM(double min, double max) {
+   //10.1 //20.9
+   double dvalue = 0;
+   int done = 0;
+   char ch;
+   while(!done) {
+      if(scanf("%lf%c", &dvalue, &ch) == 2 && ch == '\n') {
+         if(dvalue <= max && dvalue >= min) {
+            done = 1;
+         } else {
+            printf("[%.3lf<=Number<=%.3lf], try again: ", min, max);
+         }
+      } else if(scanf("%lf%c", &dvalue, &ch) != 2 && dvalue == 0) {
+         flushKey();
+         printf("Invalid Double, try again: ");
+      } else if(scanf("%lf%c", &dvalue, &ch) != 2 && ch != '\n') {
+         flushKey();
+         printf("Enter only a Double, try again: ");
+      }
+   }
+   return dvalue;
+}
