@@ -6,10 +6,11 @@
 //
 
 #include "Movie.h"
-int loadMovie(struct Movie* mptr, FILE* fptr) {
-    return (fscanf(fptr, "%60[^\t]\t%d\t%3[^\t]\t%d\t%60[^\t]\t%f", mptr->title, &mptr->year, mptr->rating, &mptr->minutes, mptr->genre, &mptr->consRating) == 6);
-}
 
+int loadMovie(struct Movie* mptr, FILE* fptr) {
+    return (fscanf(fptr, "%60[^\t]\t%d\t%3[^\t]\t%d\t%60[^\t]\t%f", mptr->title, &mptr->year, mptr->rating, &mptr->minutes, mptr->genre, &mptr->consRating));
+}
+    
 void list(const struct Movie* mptr, int row) {
     printf("| %3d | %20.20s | %d | %4s | %2d:%02d | %25.25s | %4.1f |\n", row, mptr->title, mptr->year, mptr->rating, mptr->minutes / 60, mptr->minutes % 60, mptr->genre, mptr->consRating);
 }
