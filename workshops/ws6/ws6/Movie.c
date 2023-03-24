@@ -7,7 +7,7 @@
 
 #include "Movie.h"
 int loadMovie(struct Movie* mptr, FILE* fptr) {
-    return (fscanf(fptr, "%[^\t]\t%d\t%[^\t]\t%d\t%[^\t]\t%f", mptr->title, &mptr->year, mptr->rating, &mptr->minutes, mptr->genre, &mptr->consRating) == 6);
+    return (fscanf(fptr, "%60[^\t]\t%d\t%3[^\t]\t%d\t%60[^\t]\t%f", mptr->title, &mptr->year, mptr->rating, &mptr->minutes, mptr->genre, &mptr->consRating) == 6);
 }
 
 void list(const struct Movie* mptr, int row) {
