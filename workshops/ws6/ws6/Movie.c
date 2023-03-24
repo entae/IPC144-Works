@@ -11,16 +11,16 @@ int loadMovie(struct Movie* mptr, FILE* fptr) {
 }
 
 void list(const struct Movie* mptr, int row) {
-    printf("|%3d | %20.20s | %4d | %4s | %4d | %25.25s | %4.1f |\n", row, mptr->title, &mptr->year, mptr->rating, &mptr->minutes, mptr->genre, &mptr->consRating);
+    printf("|%3d | %20.20s | %4d | %4s | %4d | %25.25s | %4.1f |\n", row, mptr->title, mptr->year, mptr->rating, mptr->minutes, mptr->genre, mptr->consRating);
 }
 
 void display(const struct Movie* m) {
     printf("Title: %s\n", m->title);
-    printf("Year: %d\n", &m->year);
+    printf("Year: %d\n", m->year);
     printf("Rating: %s\n", m->rating);
-    printf("Duration: %d\n", &m->minutes);
+    printf("Duration: %d\n", m->minutes);
     printf("Genres: %s\n", m->genre);
-    printf("Consumer Rating: %3.f\n", &m->consRating);
+    printf("Consumer Rating: %3.f\n", m->consRating);
 }
 
 const char* getMovieTitle(const struct Movie* mptr) {
