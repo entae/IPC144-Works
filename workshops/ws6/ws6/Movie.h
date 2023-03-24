@@ -12,11 +12,11 @@
 
 struct Movie {
     char title[61];
-    int year[5];
+    int year;
     char rating[4];
-    int minutes[200];
+    int minutes;
     char genre[61];
-    float consRating[];
+    float consRating;
 };
 
 //Load Movie
@@ -28,7 +28,6 @@ void display(const struct Movie* m);
 //get Movie Title
 const char* getMovieTitle(const struct Movie* mptr);
 
-void fflushKey(FILE* file);
 
 
 #endif /* Movie_h */
