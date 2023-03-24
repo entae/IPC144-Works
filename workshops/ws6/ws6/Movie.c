@@ -7,11 +7,11 @@
 
 #include "Movie.h"
 int loadMovie(struct Movie* mptr, FILE* fptr) {
-    return (fscanf(fptr, "%60[^\t]\t%d\t%3[^\t]\t%199d\t%60[^\t]\t%f", mptr->title, &mptr->year, mptr->rating, &mptr->minutes, mptr->genre, &mptr->consRating));
+    return (fscanf(fptr, "%[^\t]\t%d\t%[^\t]\t%d\t%[^\t]\t%f", mptr->title, &mptr->year, mptr->rating, &mptr->minutes, mptr->genre, &mptr->consRating) == 6);
 }
 
 void list(const struct Movie* mptr, int row) {
-    printf("|%3d | %20.20s | %4d | %4s | %4d | %25.25s | %4.1f |\n", row, mptr->title, mptr->year, mptr->rating, mptr->minutes, mptr->genre, mptr->consRating);
+    printf("| %3d | %20.20s | %d | %4s | %2d:%02d | %25.25s | %4.1f |\n", row, mptr->title, mptr->year, mptr->rating, mptr->minutes / 60, mptr->minutes % 60, mptr->genre, mptr->consRating);
 }
 
 void display(const struct Movie* m) {
@@ -25,11 +25,4 @@ void display(const struct Movie* m) {
 
 const char* getMovieTitle(const struct Movie* mptr) {
     return mptr->title;
-}
-
-void fflushKey(FILE* file) {
-    char ch = 'x';
-    while (ch != '\n') {
-        ch = fgetc(file);
-    }
 }
