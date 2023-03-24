@@ -12,7 +12,7 @@ int loadMovie(struct Movie* mptr, FILE* fptr) {
 }
     
 void list(const struct Movie* mptr, int row) {
-    printf("| %3d | %-20.20s | %d | %4s | %2d:%02d | %-25.25s | %4.1f |\n", row, mptr->title, mptr->year, mptr->rating, mptr->minutes / 60, mptr->minutes % 60, mptr->genre, mptr->consRating);
+    printf("| %3d | %-20.20s | %d | %4s |%2d:%02d | %-25.25s | %4.1f |\n", row, mptr->title, mptr->year, mptr->rating, mptr->minutes / 60, mptr->minutes % 60, mptr->genre, mptr->consRating);
 }
 
 void display(const struct Movie* m) {
