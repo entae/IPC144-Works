@@ -53,16 +53,18 @@ void flushKey(void) {
 }
 /// RRRRRRRRRRRRRRRRRRREUSE you code!!!!!!!
 int getIntMM(int min, int max) {
-   int value = 0;
-   int done = 0;
-   char ch;
-   do {
-      value = getInt();
-      if(value <= max && value >= min) 
-         printf("[%d<=Number<=%d], try again: ", min, max);
-   } while(value <= max && value >= min);
-            
-   return value;
+    int value;
+    int done = 0;
+    while (!done) {
+        value = getInt();
+        if (value <= max && value >= min) {
+            done = 1;
+        } else if (value > max || value < min) {
+            printf("[%d<=Number<=%d], try again: ", min, max);
+            flushKey();
+        }
+    }
+    return value;
 }
 
 double getDouble(void) {
