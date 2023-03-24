@@ -1,20 +1,6 @@
 /***********************************************************************
-// IPC Workshop 6 : tester program
-//
-// File    main.c
-// Version 1.0
-// Date Winter 2022
-// Author  Fardad Soleimanloo
-// Description
-//
-//  Add the code required as commented below
-//
-// Revision History
-// -----------------------------------------------------------
-// Name            Date            Reason
-//
-/////////////////////////////////////////////////////////////////
-***********************************************************************/
+In Tae Chung    itchung@myseneca.ca 128 958 220
+/////////////////////////////////////////////////////////////////*/
 #define _CRT_SECURE_NO_WARNINGS
 #include <stdio.h>
 #include <string.h>
