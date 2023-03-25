@@ -19,7 +19,7 @@ void display(const struct Movie* m) {
     printf("Title: %s\n", m->title);
     printf("Year: %d\n", m->year);
     printf("Rating: %s\n", m->rating);
-    printf("Duration: %2d:%02d\n", m->minutes / 60, m->minutes % 60);
+    printf("Duration:%2d:%02d\n", m->minutes / 60, m->minutes % 60);
     printf("Genres: %s\n", m->genre);
     printf("Consumer Rating: %3.f\n", m->consRating);
 }
