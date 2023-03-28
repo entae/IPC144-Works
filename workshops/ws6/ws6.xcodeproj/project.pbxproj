@@ -24,11 +24,11 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		0D68732A29D36DC800B53D28 /* movies.dat */ = {isa = PBXFileReference; lastKnownFileType = text; path = movies.dat; sourceTree = "<group>"; };
 		0DD7223529CE2ED700C63727 /* ws6 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = ws6; sourceTree = BUILT_PRODUCTS_DIR; };
 		0DD7223829CE2ED700C63727 /* main.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = main.c; sourceTree = "<group>"; };
 		0DD7224129CE2F3B00C63727 /* Movie.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Movie.h; sourceTree = "<group>"; };
 		0DD7224229CE2F3B00C63727 /* Movie.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = Movie.c; sourceTree = "<group>"; };
-		0DD7225329CE660000C63727 /* movies.dat */ = {isa = PBXFileReference; lastKnownFileType = text; path = movies.dat; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,8 +61,8 @@
 		0DD7223729CE2ED700C63727 /* ws6 */ = {
 			isa = PBXGroup;
 			children = (
+				0D68732A29D36DC800B53D28 /* movies.dat */,
 				0DD7223829CE2ED700C63727 /* main.c */,
-				0DD7225329CE660000C63727 /* movies.dat */,
 				0DD7224129CE2F3B00C63727 /* Movie.h */,
 				0DD7224229CE2F3B00C63727 /* Movie.c */,
 			);
