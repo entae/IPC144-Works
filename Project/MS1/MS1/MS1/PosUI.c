@@ -7,7 +7,7 @@
 #define _CRT_SECURE_NO_WARNINGS
 #include <stdio.h>
 #include "PosUI.h"
-#include "PosAPP.h"
+#include "PosApp.h"
 #include "utils.h"
 
 void runPos(const char filename[]) {
