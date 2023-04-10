@@ -1,0 +1,4 @@
+Project MS1 Reflect - In Tae Chung, 129 958 220
+
+I am submitting past the original deadline in part due to my own procrastination, but because there was no penalty for a week after the due date, I decided to catch up a bit on my other courses.
+This milestone was a fairly simple task of putting together the files laid out and provided for the project, and I found it to be of good practice. Working with files instead of direct input/output is still something I am getting used to implementing, so I found this opportunity to be very helpful as a simple practice task.
