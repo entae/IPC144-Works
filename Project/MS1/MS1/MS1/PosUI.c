@@ -35,7 +35,6 @@ void runPos(const char filename[]) {
 
 int menu(void) {
     int selection;
-    int done = 0;
     printf("The Sene-Store\n"
            "1- Inventory\n"
            "2- Add item\n"
