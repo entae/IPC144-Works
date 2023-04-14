@@ -1,6 +1,6 @@
 //
 //  PosApp.c
-//  MS1
+//  MS2
 //
 //  Created by Intae Chung on 2023-03-29.
 //
@@ -25,7 +25,7 @@ int loadItems(const char filename[]) {
         printf(">>>>> Done!...");
     }
     fclose(fp);
-   return noOfItems;
+    return noOfItems;
 }
 
 void saveItems(const char filename[]) {
@@ -37,7 +37,7 @@ void inventory(void) {
     int i = 0;
     start(">>>> List Items...");
     listItems();
-    for (i =0; i< noOfItems; i++) {
+    for (i =0; i < noOfItems; i++) {
         tav += cost(&items[i]) * items[i].quantity;
     }
     printf("                               Total Asset: $  | 9999999999.99 |"
@@ -58,7 +58,7 @@ void stockItem(void) {
 
 void POS(void) {
    start("Point Of Sale");
-} 
+}
 
 double cost(const struct Item* item) {
     double the_cost = item->price * (1 + item->taxed * TAX);

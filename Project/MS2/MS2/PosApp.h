@@ -1,6 +1,6 @@
 //
 //  PosApp.h
-//  MS1
+//  MS2
 //
 //  Created by Intae Chung on 2023-03-29.
 //

@@ -22,7 +22,7 @@
 #include "POS.h"
 #include "PosUI.h"
 
-int main(void) {
+int main() {
    printf("Testing POS.h defined values:\n");
    if(TAX - 0.13 < 0.00001 && 0.13 - TAX < 0.00001) {
       printf("TAX value is corrct!\n");
