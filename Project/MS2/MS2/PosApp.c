@@ -40,8 +40,8 @@ void inventory(void) {
     for (i =0; i < noOfItems; i++) {
         tav += cost(&items[i]) * items[i].quantity;
     }
-    printf("                               Total Asset: $  | 9999999999.99 |\n"
-           "-----------------------------------------------^---------------^\n");
+    printf("                               Total Asset: $  |%14.2lf |\n", tav);
+    printf("-----------------------------------------------^---------------^\n");
 }
 
 void addItem(void) {
