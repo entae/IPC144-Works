@@ -40,7 +40,7 @@ void inventory(void) {
     for (i =0; i < noOfItems; i++) {
         tav += cost(&items[i]) * items[i].quantity;
     }
-    printf("                               Total Asset: $  | 9999999999.99 |"
+    printf("                               Total Asset: $  | 9999999999.99 |\n"
            "-----------------------------------------------^---------------^");
 }
 
@@ -68,12 +68,12 @@ double cost(const struct Item* item) {
 void listItems(void) {
     char iName[19];
     int i = 0;
-    printf(" Row | SKU    | Item Name          | Price |TX | Qty |   Total |"
+    printf(" Row | SKU    | Item Name          | Price |TX | Qty |   Total |\n"
            "-----|--------|--------------------|-------|---|-----|---------|");
     for (i=0;i < noOfItems; i++) {
         strncpy(iName, items[i].name, 18);
         iName[18] = 0;
-        printf("%4d | %6s | %-18s | %6.2lf | %c | %3d | %8.2lf |\n", i+1, items[i].SKU,iName, items[i].price, items[i].taxed ? 'T' : ' ', items[i].quantity, cost(&items[i]) * items[i].quantity);
+        printf("%4d| %6s | %-18s | %6.2lf | %c | %3d | %8.2lf |\n", i+1, items[i].SKU,iName, items[i].price, items[i].taxed ? 'T' : ' ', items[i].quantity, cost(&items[i]) * items[i].quantity);
     }
     printf("-----^--------^--------------------^-------^---^-----^---------^");
 }
