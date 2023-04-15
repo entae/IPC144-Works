@@ -15,14 +15,14 @@ void start(const char* action) {
 
 int loadItems(const char filename[]) {
     int i = 0;
-    printf(">>>> Loading Items...\n");
+    start("Loading Items");
     FILE* fp = fopen(filename, "r");
     if (fp != NULL) {
         while (fscanf(fp, "%[^,],%[^,],%lf,%d,%d\n", items[i].SKU, items[i].name, &items[i].price, &items[i].taxed, &items[i].quantity) == 5) {
             i++;
         }
         noOfItems = i;
-        printf(">>>> Done!...\n");
+        start("Done!");
     }
     fclose(fp);
     return noOfItems;
@@ -35,13 +35,13 @@ void saveItems(const char filename[]) {
 void inventory(void) {
     double tav = 0;
     int i = 0;
-    start(">>>> List Items...");
+    start("List Items");
     listItems();
     for (i =0; i < noOfItems; i++) {
         tav += cost(&items[i]) * items[i].quantity;
     }
     printf("                               Total Asset: $  | 9999999999.99 |\n"
-           "-----------------------------------------------^---------------^");
+           "-----------------------------------------------^---------------^\n");
 }
 
 void addItem(void) {
@@ -69,11 +69,11 @@ void listItems(void) {
     char iName[19];
     int i = 0;
     printf(" Row | SKU    | Item Name          | Price |TX | Qty |   Total |\n"
-           "-----|--------|--------------------|-------|---|-----|---------|");
+           "-----|--------|--------------------|-------|---|-----|---------|\n");
     for (i=0;i < noOfItems; i++) {
         strncpy(iName, items[i].name, 18);
         iName[18] = 0;
-        printf("%4d| %6s | %-18s | %6.2lf | %c | %3d | %8.2lf |\n", i+1, items[i].SKU,iName, items[i].price, items[i].taxed ? 'T' : ' ', items[i].quantity, cost(&items[i]) * items[i].quantity);
+        printf("%4d | %6s | %-18s |%6.2lf | %c | %3d | %8.2lf|\n", i+1, items[i].SKU,iName, items[i].price, items[i].taxed ? 'T' : ' ', items[i].quantity, cost(&items[i]) * items[i].quantity);
     }
-    printf("-----^--------^--------------------^-------^---^-----^---------^");
+    printf("-----^--------^--------------------^-------^---^-----^---------^\n");
 }
