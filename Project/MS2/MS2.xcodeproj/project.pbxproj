@@ -11,7 +11,6 @@
 		0DF85E6029E9F57300E1F387 /* utils.c in Sources */ = {isa = PBXBuildFile; fileRef = 0DF85E5F29E9F57300E1F387 /* utils.c */; };
 		0DF85E6329E9F58500E1F387 /* PosUI.c in Sources */ = {isa = PBXBuildFile; fileRef = 0DF85E6229E9F58500E1F387 /* PosUI.c */; };
 		0DF85E6629E9F59B00E1F387 /* PosApp.c in Sources */ = {isa = PBXBuildFile; fileRef = 0DF85E6529E9F59B00E1F387 /* PosApp.c */; };
-		0DF85E6A29EA3C9100E1F387 /* posdata.csv in CopyFiles */ = {isa = PBXBuildFile; fileRef = 0DF85E6829EA3C4C00E1F387 /* posdata.csv */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -30,7 +29,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 16;
 			files = (
-				0DF85E6A29EA3C9100E1F387 /* posdata.csv in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -46,7 +44,8 @@
 		0DF85E6429E9F59B00E1F387 /* PosApp.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PosApp.h; sourceTree = "<group>"; };
 		0DF85E6529E9F59B00E1F387 /* PosApp.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = PosApp.c; sourceTree = "<group>"; };
 		0DF85E6729E9F5AC00E1F387 /* POS.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = POS.h; sourceTree = "<group>"; };
-		0DF85E6829EA3C4C00E1F387 /* posdata.csv */ = {isa = PBXFileReference; lastKnownFileType = text; path = posdata.csv; sourceTree = "<group>"; };
+		0DF85E6D29EA401D00E1F387 /* posdata.csv */ = {isa = PBXFileReference; lastKnownFileType = text; path = posdata.csv; sourceTree = "<group>"; };
+		0DF85E6E29EA403100E1F387 /* Data */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Data; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +62,7 @@
 		0DF85E4B29E9F54800E1F387 = {
 			isa = PBXGroup;
 			children = (
+				0DF85E6C29EA400C00E1F387 /* Data */,
 				0DF85E5629E9F54800E1F387 /* MS2 */,
 				0DF85E5529E9F54800E1F387 /* Products */,
 			);
@@ -80,7 +80,7 @@
 			isa = PBXGroup;
 			children = (
 				0DF85E5729E9F54800E1F387 /* main.c */,
-				0DF85E6829EA3C4C00E1F387 /* posdata.csv */,
+				0DF85E6E29EA403100E1F387 /* Data */,
 				0DF85E6729E9F5AC00E1F387 /* POS.h */,
 				0DF85E6429E9F59B00E1F387 /* PosApp.h */,
 				0DF85E6529E9F59B00E1F387 /* PosApp.c */,
@@ -90,6 +90,14 @@
 				0DF85E5F29E9F57300E1F387 /* utils.c */,
 			);
 			path = MS2;
+			sourceTree = "<group>";
+		};
+		0DF85E6C29EA400C00E1F387 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				0DF85E6D29EA401D00E1F387 /* posdata.csv */,
+			);
+			path = Data;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
