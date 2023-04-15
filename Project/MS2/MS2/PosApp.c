@@ -15,14 +15,14 @@ void start(const char* action) {
 
 int loadItems(const char filename[]) {
     int i = 0;
-    printf(">>>>> Loading Items...");
+    printf(">>>> Loading Items...\n");
     FILE* fp = fopen(filename, "r");
     if (fp != NULL) {
         while (fscanf(fp, "%[^,],%[^,],%lf,%d,%d\n", items[i].SKU, items[i].name, &items[i].price, &items[i].taxed, &items[i].quantity) == 5) {
             i++;
         }
         noOfItems = i;
-        printf(">>>>> Done!...");
+        printf(">>>> Done!...\n");
     }
     fclose(fp);
     return noOfItems;
