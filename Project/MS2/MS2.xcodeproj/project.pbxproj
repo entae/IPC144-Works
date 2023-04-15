@@ -11,6 +11,7 @@
 		0DF85E6029E9F57300E1F387 /* utils.c in Sources */ = {isa = PBXBuildFile; fileRef = 0DF85E5F29E9F57300E1F387 /* utils.c */; };
 		0DF85E6329E9F58500E1F387 /* PosUI.c in Sources */ = {isa = PBXBuildFile; fileRef = 0DF85E6229E9F58500E1F387 /* PosUI.c */; };
 		0DF85E6629E9F59B00E1F387 /* PosApp.c in Sources */ = {isa = PBXBuildFile; fileRef = 0DF85E6529E9F59B00E1F387 /* PosApp.c */; };
+		0DF85E6A29EA3C9100E1F387 /* posdata.csv in CopyFiles */ = {isa = PBXBuildFile; fileRef = 0DF85E6829EA3C4C00E1F387 /* posdata.csv */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -22,6 +23,16 @@
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 1;
+		};
+		0DF85E6929EA3C7C00E1F387 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 16;
+			files = (
+				0DF85E6A29EA3C9100E1F387 /* posdata.csv in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXCopyFilesBuildPhase section */
 
@@ -35,6 +46,7 @@
 		0DF85E6429E9F59B00E1F387 /* PosApp.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PosApp.h; sourceTree = "<group>"; };
 		0DF85E6529E9F59B00E1F387 /* PosApp.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = PosApp.c; sourceTree = "<group>"; };
 		0DF85E6729E9F5AC00E1F387 /* POS.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = POS.h; sourceTree = "<group>"; };
+		0DF85E6829EA3C4C00E1F387 /* posdata.csv */ = {isa = PBXFileReference; lastKnownFileType = text; path = posdata.csv; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,6 +80,7 @@
 			isa = PBXGroup;
 			children = (
 				0DF85E5729E9F54800E1F387 /* main.c */,
+				0DF85E6829EA3C4C00E1F387 /* posdata.csv */,
 				0DF85E6729E9F5AC00E1F387 /* POS.h */,
 				0DF85E6429E9F59B00E1F387 /* PosApp.h */,
 				0DF85E6529E9F59B00E1F387 /* PosApp.c */,
@@ -89,6 +102,7 @@
 				0DF85E5029E9F54800E1F387 /* Sources */,
 				0DF85E5129E9F54800E1F387 /* Frameworks */,
 				0DF85E5229E9F54800E1F387 /* CopyFiles */,
+				0DF85E6929EA3C7C00E1F387 /* CopyFiles */,
 			);
 			buildRules = (
 			);

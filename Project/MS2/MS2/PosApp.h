@@ -14,9 +14,6 @@ struct Item {
     int taxed;
     int quantity;
 };
-struct Item items[MAX_NO_ITEMS];
-int noOfItems;
-
 void start(const char* action);
 int loadItems(const char filename[]);
 void saveItems(const char filename[]);
@@ -25,6 +22,8 @@ void addItem(void);
 void removeItem(void);
 void stockItem(void);
 void POS(void);
+struct Item items[MAX_NO_ITEMS];
+int noOfItems;
 double cost(const struct Item* item);
 void listItems(void);
 
