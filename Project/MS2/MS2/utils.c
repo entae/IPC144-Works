@@ -4,6 +4,11 @@
 //
 //  Intae Chung
 //
+/* Citation and Sources
+ MS2
+ void cpyString(char* des, const char* src, int size) uitls.c referenced in PosApp.c
+ Classmate Emily Fagin showed me this function as a way of copying one string variable to another without the use of strncpy from the <string.h> library and gave me permission to incorporate it into my code
+ */
 #define _CRT_SECURE_NO_WARNINGS
 #include <stdio.h>
 #include "utils.h"
@@ -88,4 +93,11 @@ int yes(void) {
 void pressEnter(void) {
    printf("Press <ENTER> to continue....");
    flushKey();
+}
+
+void cpyString(char* des, const char* src, int size) {
+    int i = 0;
+    for (i = 0; i < size; i++) {
+        des[i] = src[i];
+    }
 }

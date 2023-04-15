@@ -4,10 +4,14 @@
 //
 //  Created by Intae Chung on 2023-03-29.
 //
-
+/* Citation and Sources
+ MS2
+ void cpyString(char* des, const char* src, int size) uitls.c referenced in PosApp.c
+ Classmate Emily Fagin showed me this function as a way of copying one string variable to another without the use of strncpy from the <string.h> library and gave me permission to incorporate it into my code
+ */
 #include "PosApp.h"
+#include "utils.h"
 #include <stdio.h>
-#include <string.h>
 
 void start(const char* action) {
    printf(">>>> %s...\n", action);
@@ -71,7 +75,7 @@ void listItems(void) {
     printf(" Row | SKU    | Item Name          | Price |TX | Qty |   Total |\n"
            "-----|--------|--------------------|-------|---|-----|---------|\n");
     for (i=0;i < noOfItems; i++) {
-        strncpy(iName, items[i].name, 18);
+        cpyString(iName, items[i].name, 18);
         iName[18] = 0;
         printf("%4d | %6s | %-18s |%6.2lf | %c | %3d |%8.2lf |\n", i+1, items[i].SKU,iName, items[i].price, items[i].taxed ? 'T' : ' ', items[i].quantity, cost(&items[i]) * items[i].quantity);
     }

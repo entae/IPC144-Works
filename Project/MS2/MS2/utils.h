@@ -46,4 +46,10 @@ int yes(void);
 /// </summary>
 void pressEnter(void);
 
+void cpyString(char* des, const char* src, int size);
+/// <summary>
+/// Copies character by character from a source string into a destination string variable
+/// the length of the string is predetermined with a int variable
+/// </summary>
+
 #endif // !SDDS_UTILS_H
