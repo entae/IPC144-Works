@@ -26,5 +26,6 @@ struct Item items[MAX_NO_ITEMS];
 int noOfItems;
 double cost(const struct Item* item);
 void listItems(void);
+double billDisplay(const struct Item* item);
 
 #endif // !SDDS_POSAPP_H
