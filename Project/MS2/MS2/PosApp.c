@@ -120,7 +120,7 @@ void display(const struct Item* item) {
 }
 
 int search(void) {
-    char sku[MAX_SKU_LEN];
+    char sku[MAX_SKU_LEN + 1];
     int i;
     int result = -1;
     printf("Sku: ");
@@ -128,7 +128,7 @@ int search(void) {
         result = -2;
     }
     for ( i=0; i<noOfItems; i++ ) {
-        if(cpyString(sku, items[i].SKU, 6) == 0) {
+        if(cpyString(sku, items[i].SKU, 7) == 0) {
             result = i;
         }
     }
