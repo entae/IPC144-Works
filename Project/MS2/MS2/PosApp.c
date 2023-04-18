@@ -74,7 +74,38 @@ void stockItem(void) {
 }
 
 void POS(void) {
-   start("Point Of Sale");
+    int itemCount = 0;
+    struct Item bill[MAX_BILL_ITEMS];
+    int find , i;
+    start("Point Of Sale");
+    while (itemCount < MAX_BILL_ITEMS) {
+        for(i = 0; (find = search()) != -2;i++){
+           if(find == -1) {
+              printf("SKU not found!\n");
+           }
+           else if (items[find].quantity == 0){
+              printf("SItem sold out!\n");
+           }
+           else {
+               items[find].quantity--;
+               bill[itemCount++] = items[find];
+               display(&items[find]);
+           }
+        }
+    }
+    if (find != 0) {
+        printf("+---------------v-----------v-----+\n"
+               "| Item          |     Price | Tax |\n"
+               "+---------------+-----------+-----+\n");
+        double total = 0.0;
+        for (int i = 0; i < itemCount; i++ ) {
+            double itemPrice = billDisplay(&bill[i]);
+            total += itemPrice;
+        }
+        printf("+---------------^-----------^-----+\n");
+        printf("| total:         %10.2lf |\n", total);
+        printf("^---------------------------^");
+    }
 }
 
 double billDisplay(const struct Item* item) {
