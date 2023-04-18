@@ -118,3 +118,19 @@ void display(const struct Item* item) {
     printf("Stock Qty:   %d\n", item->quantity);
     printf("=============^\n");
 }
+
+int search(void) {
+    char sku[MAX_SKU_LEN];
+    int i;
+    int result = -1;
+    printf("Sku: ");
+    if (scanf("%[^\n]%*c", sku) != 1) {
+        result = -2;
+    }
+    for ( i=0; i<noOfItems; i++ ) {
+        if(cpyString(sku, items[i].SKU, 6) == 0) {
+            result = i;
+        }
+    }
+    return result;
+}
