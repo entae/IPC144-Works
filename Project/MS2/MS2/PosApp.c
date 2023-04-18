@@ -81,7 +81,7 @@ double billDisplay(const struct Item* item) {
     char itemName[15];
     cpyString(itemName, item->name, 14);
     itemName[14] = '\0';
-    printf("| %-14.14s | %9.2lf | %s |\n", item->name, itemCost, item->taxed ? "Yes" : "   ");
+    printf("| %-14.14s| %9.2lf | %s |\n", item->name, itemCost, item->taxed ? "Yes" : "   ");
     return cost(item);
 }
 
