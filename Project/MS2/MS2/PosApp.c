@@ -128,7 +128,7 @@ int search(void) {
         result = -2;
     }
     for ( i=0; i<noOfItems; i++ ) {
-        if(cpyString(sku, items[i].SKU, MAX_SKU_LEN) == 1) {
+        if(cpyString(sku, items[i].SKU, MAX_SKU_LEN) == i) {
             result = i;
         }
     }
