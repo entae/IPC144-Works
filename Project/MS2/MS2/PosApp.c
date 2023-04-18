@@ -103,3 +103,18 @@ void listItems(void) {
     printf("-----^--------^--------------------^-------^---^-----^---------^\n");
 }
 
+void display(const struct Item* item) {
+    printf("=============v\n");
+    printf("Name:       %s\n", item->name);
+    printf("Sku:        %s\n", item->SKU);
+    printf("Price:      %.2lf\n", item->price);
+    printf("Price + tax: ");
+    if (item->taxed) {
+        printf("%.2lf\n", cost(item));
+    }
+    else {
+        printf("N/A\n");
+    }
+    printf("Stock Qty:  %d\n", item->quantity);
+    printf("=============^\n");
+}

@@ -17,6 +17,7 @@
  Classmate Emily Fagin showed me this function as a way of copying one string variable to another without the use of strncpy from the <string.h> library and gave me permission to incorporate it into my code
  */
 /////////////////////////////////////////////////////////////////
+#include <stdio.h>
 #include "PosApp.h"
 int main() {
    struct Item I[6] = {
@@ -29,11 +30,10 @@ int main() {
    };
    int i;
    double total = 0;
-   printf("  Name                Price  taxed\n");
    for(i = 0; i < 6; i++) {
-      total += billDisplay(&I[i]);
+      display(&I[i]);
+      total += cost(&I[i]);
    }
    printf("total: %.2lf", total);
    return 0;
 }
-
