@@ -38,7 +38,7 @@ void saveItems(const char filename[]) {
     FILE* fp = fopen(filename, "w");
     if (fp != NULL) {
         for (i=0; i < noOfItems; i++) {
-            fprintf(fp, "%s,%s,%2.1lf,%d,%d\n", items[i].SKU, items[i].name, items[i].price, items[i].taxed, items[i].quantity);
+            fprintf(fp, "%s,%s,%2.2lf,%d,%d\n", items[i].SKU, items[i].name, items[i].price, items[i].taxed, items[i].quantity);
         }
         start("Done!");
         fclose(fp);
