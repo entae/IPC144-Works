@@ -125,6 +125,7 @@ int search(void) {
     int result = -1;
     printf("Sku: ");
     if (scanf("%[^\n]%*c", sku) != 1) {
+        flushKey();
         result = -2;
     }
     for ( i=0; i<noOfItems; i++ ) {
