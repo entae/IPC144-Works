@@ -126,9 +126,10 @@ int search(void) {
     printf("Sku: ");
     if (scanf("%[^\n]%*c", sku) != 1) {
         result = -2;
+        flushKey();
     }
     for ( i=0; i<noOfItems; i++ ) {
-        if(cpyString(sku, items[i].SKU, MAX_SKU_LEN) == i) {
+        if(cpyString(sku, items[i].SKU, MAX_SKU_LEN) == 0) {
             result = i;
         }
     }
