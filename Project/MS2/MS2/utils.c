@@ -100,5 +100,5 @@ int cpyString(char* des, const char* src, int size) {
     for (i = 0; i < size; i++) {
         des[i] = src[i];
     }
-    return i;
+    return 0;
 }
