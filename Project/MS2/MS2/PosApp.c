@@ -12,6 +12,7 @@
 #include "PosApp.h"
 #include "utils.h"
 #include <stdio.h>
+#include <string.h>
 
 void start(const char* action) {
    printf(">>>> %s...\n", action);
@@ -98,7 +99,7 @@ void listItems(void) {
     for (i=0;i < noOfItems; i++) {
         cpyString(iName, items[i].name, 18);
         iName[18] = 0;
-        printf("%4d | %6s | %-18s |%6.2lf | %c | %3d |%8.2lf |\n", i+1, items[i].SKU,iName, items[i].price, items[i].taxed ? 'T' : ' ', items[i].quantity, cost(&items[i]) * items[i].quantity);
+        printf("%4d | %6s | %-18s |%6.2lf | %c | %3d |%8.2lf |\n", i+1, items[i].SKU, iName, items[i].price, items[i].taxed ? 'T' : ' ', items[i].quantity, cost(&items[i]) * items[i].quantity);
     }
     printf("-----^--------^--------------------^-------^---^-----^---------^\n");
 }
@@ -128,7 +129,7 @@ int search(void) {
         index = -2;
     }
     for ( i=0; i<noOfItems; i++ ) {
-        if(sku == items[i].SKU) {
+        if (strcmp(sku, items[i].SKU) == 0) {
             index = i;
         }
     }
