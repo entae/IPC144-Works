@@ -95,10 +95,10 @@ void pressEnter(void) {
    flushKey();
 }
 
-int cpyString(char* des, const char* src, int size) {
+void cpyString(char* des, const char* src, int size) {
     int i = 0;
     for (i = 0; i < size; i++) {
         des[i] = src[i];
     }
-    return 0;
 }
+
