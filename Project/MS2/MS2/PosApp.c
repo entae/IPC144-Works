@@ -78,7 +78,7 @@ void POS(void) {
     double total = 0.0;
     int done = 1;
     struct Item bill[MAX_BILL_ITEMS];
-    int find , i;
+    int find, i;
     start("Point Of Sale");
     while (itemCount < MAX_BILL_ITEMS)
     {
@@ -107,7 +107,7 @@ void POS(void) {
         printf("+---------------v-----------v-----+\n"
                "| Item          |     Price | Tax |\n"
                "+---------------+-----------+-----+\n");
-        for (int i = 0; i < itemCount; i++ ) {
+        for (i = 0; i < itemCount; i++ ) {
             double itemPrice = billDisplay(&bill[i]);
             total += itemPrice;
         }
