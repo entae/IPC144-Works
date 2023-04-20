@@ -82,7 +82,7 @@ void POS(void) {
     int done = 1;
     start("Point Of Sale");
     while (done && itemCount < MAX_BILL_ITEMS) {
-       int find = search();
+       find = search();
        if (find == -2)
        {
           done = 0;
