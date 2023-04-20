@@ -77,12 +77,11 @@ void POS(void) {
     int itemCount = 0;
     double total = 0.0;
     double itemPrice;
-    int done = 1;
     struct Item bill[MAX_BILL_ITEMS];
     int find, i;
+    int done = 1;
     start("Point Of Sale");
-    while (itemCount < MAX_BILL_ITEMS)
-    {
+    while (itemCount < MAX_BILL_ITEMS) {
        int find = search();
 
        if (find == -2)
