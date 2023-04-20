@@ -75,29 +75,38 @@ void stockItem(void) {
 
 void POS(void) {
     int itemCount = 0;
+    double total = 0.0;
+    int done = 1;
     struct Item bill[MAX_BILL_ITEMS];
     int find , i;
     start("Point Of Sale");
-    while (itemCount < MAX_BILL_ITEMS) {
-        for(i = 0; (find = search()) != -2;i++){
-           if(find == -1) {
-              printf("SKU not found!\n");
-           }
-           else if (items[find].quantity == 0){
-              printf("SItem sold out!\n");
-           }
-           else {
-               items[find].quantity--;
-               bill[itemCount++] = items[find];
-               display(&items[find]);
-           }
-        }
+    while (itemCount < MAX_BILL_ITEMS)
+    {
+       int find = search();
+
+       if (find == -2)
+       {
+          done = 0;
+       }
+       else if (find == -1)
+       {
+          printf("SKU not found!\n");
+       }
+       else if (items[find].quantity == 0)
+       {
+          printf("Item sold out!\n");
+       }
+       else
+       {
+          items[find].quantity--;
+          bill[itemCount++] = items[find];
+          display(&items[find]);
+       }
     }
     if (find != 0) {
         printf("+---------------v-----------v-----+\n"
                "| Item          |     Price | Tax |\n"
                "+---------------+-----------+-----+\n");
-        double total = 0.0;
         for (int i = 0; i < itemCount; i++ ) {
             double itemPrice = billDisplay(&bill[i]);
             total += itemPrice;
@@ -118,8 +127,8 @@ double billDisplay(const struct Item* item) {
 }
 
 double cost(const struct Item* item) {
-    double the_cost = item->price * (1 + item->taxed * TAX);
-    return the_cost;
+    double cost = item->price * (1 + item->taxed * TAX);
+    return cost;
 }
 
 void listItems(void) {
