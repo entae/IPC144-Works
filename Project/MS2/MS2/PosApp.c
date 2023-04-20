@@ -76,6 +76,7 @@ void stockItem(void) {
 void POS(void) {
     int itemCount = 0;
     double total = 0.0;
+    double itemPrice;
     int done = 1;
     struct Item bill[MAX_BILL_ITEMS];
     int find, i;
@@ -108,7 +109,7 @@ void POS(void) {
                "| Item          |     Price | Tax |\n"
                "+---------------+-----------+-----+\n");
         for (i = 0; i < itemCount; i++ ) {
-            double itemPrice = billDisplay(&bill[i]);
+            itemPrice = billDisplay(&bill[i]);
             total += itemPrice;
         }
         printf("+---------------^-----------^-----+\n");
