@@ -81,9 +81,8 @@ void POS(void) {
     int find, i;
     int done = 1;
     start("Point Of Sale");
-    while (itemCount < MAX_BILL_ITEMS) {
+    while (done && itemCount < MAX_BILL_ITEMS) {
        int find = search();
-
        if (find == -2)
        {
           done = 0;
@@ -103,7 +102,7 @@ void POS(void) {
           display(&items[find]);
        }
     }
-    if (find != 0) {
+    if (itemCount != 0) {
         printf("+---------------v-----------v-----+\n"
                "| Item          |     Price | Tax |\n"
                "+---------------+-----------+-----+\n");
