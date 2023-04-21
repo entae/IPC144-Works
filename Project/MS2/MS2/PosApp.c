@@ -72,7 +72,7 @@ void removeItem(void) {
 void stockItem(void) {
     int selection, quantity;
     start("Stock Items");
-    printf("Select an item: ");
+    printf("Select an item:  \n");
     selection = selectItems();
     display(&items[selection]);
     printf("Quantity to add: ");
