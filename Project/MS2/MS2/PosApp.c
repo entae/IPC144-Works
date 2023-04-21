@@ -185,6 +185,7 @@ int search(void) {
 
 int selectItems(void) {
     int row;
+    printf("-----v--------v--------------------v-------v---v-----v---------v\n");
     listItems();
     printf("Select row: ");
     row = getIntMM(1, noOfItems, "Row Number");
