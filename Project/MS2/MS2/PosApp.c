@@ -70,7 +70,15 @@ void removeItem(void) {
 }
 
 void stockItem(void) {
-   start("Stock Items");
+    int selection, quantity;
+    start("Stock Items");
+    printf("Select an item: \n");
+    selection = selectItems();
+    display(&items[selection]);
+    printf("Quantity to add: ");
+    quantity = getIntMM(1, MAX_STOCK_NUMBER, "Quantity to Add");
+    items[selection].quantity += quantity;
+    start("Done!");
 }
 
 void POS(void) {
@@ -173,4 +181,12 @@ int search(void) {
         }
     }
     return index;
+}
+
+int selectItems(void) {
+    int row;
+    listItems();
+    printf("Select row: ");
+    row = getIntMM(1, noOfItems, "Row Number");
+    return row -1;
 }

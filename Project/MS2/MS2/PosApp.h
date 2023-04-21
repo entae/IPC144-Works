@@ -29,4 +29,5 @@ void listItems(void);
 double billDisplay(const struct Item* item);
 void display(const struct Item* item);
 int search(void);
+int selectItems(void);
 #endif // !SDDS_POSAPP_H
