@@ -16,3 +16,4 @@ Milestone four was surprisingly (fairly) easy to complete compared to how much w
 
 ms5
 I initially started ms5 "addItems" by making individual variables and putting values in them through scanf's. Then I realized that I could take advantage of the struct Item that we had already made and just use a new instance of the struct. I realized while trying to submit that the added items could not go over the noOfItems variable, and so put the above work in an if statement to only run if the noOfItems was not equal to the MAX_NO_ITEMS. 
+"removeItem" seemed tougher to do at first, but then I realized that after receiving the row number that should be removed, I could make the next index in the struct equal the previous index starting from the selected index. I tried doing this without a counter variable "i" in the for loop and was pleasantly surprised. 

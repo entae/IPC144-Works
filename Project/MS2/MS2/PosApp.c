@@ -172,7 +172,8 @@ double cost(const struct Item* item) {
 void listItems(void) {
     char iName[19];
     int i = 0;
-    printf(" Row | SKU    | Item Name          | Price |TX | Qty |   Total |\n"
+    printf("-----v--------v--------------------v-------v---v-----v---------v\n"
+           " Row | SKU    | Item Name          | Price |TX | Qty |   Total |\n"
            "-----|--------|--------------------|-------|---|-----|---------|\n");
     for (i=0;i < noOfItems; i++) {
         cpyString(iName, items[i].name, 18);
@@ -216,7 +217,6 @@ int search(void) {
 
 int selectItems(void) {
     int row;
-    printf("-----v--------v--------------------v-------v---v-----v---------v\n");
     listItems();
     printf("Select row: ");
     row = getIntMM(1, noOfItems, "Row Number");
