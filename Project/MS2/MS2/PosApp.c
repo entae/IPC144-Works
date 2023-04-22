@@ -63,22 +63,27 @@ void inventory(void) {
 
 void addItem(void) {
     start("Adding Item");
-    struct Item new;
-    printf("SKU ");
-    scanf("%[^\n]", new.SKU);
-    flushKey();
-    printf("Name: ");
-    scanf("%[^\n]", new.name);
-    flushKey();
-    printf("Price: ");
-    new.price = getDbl();
-    printf("Is the item Taxed? ");
-    new.taxed = yes();
-    printf("Quantity: ");
-    new.quantity = getIntMM(1, MAX_STOCK_NUMBER, "Quantity");
-    noOfItems++;
-    items[noOfItems] = new;
-    start("Done!");
+    if (noOfItems != MAX_NO_ITEMS) {
+        struct Item new;
+        printf("SKU: ");
+        scanf("%[^\n]", new.SKU);
+        flushKey();
+        printf("Name: ");
+        scanf("%[^\n]", new.name);
+        flushKey();
+        printf("Price: ");
+        new.price = getDbl();
+        printf("Is the item Taxed? ");
+        new.taxed = yes();
+        printf("Quantity: ");
+        new.quantity = getIntMM(1, MAX_STOCK_NUMBER, "Quantity");
+        noOfItems++;
+        items[noOfItems] = new;
+        start("Done!");
+    }
+    else {
+        printf("This system cannot store more than %d different Items in the inventory!\n", MAX_NO_ITEMS);
+    }
 }
 
 void removeItem(void) {
