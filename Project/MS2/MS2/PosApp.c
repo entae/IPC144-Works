@@ -62,7 +62,21 @@ void inventory(void) {
 }
 
 void addItem(void) {
-   start("Adding Item");
+    start("Adding Item\n");
+    struct Item new;
+    printf("SKU ");
+    scanf("%[^\n]", new.SKU);
+    printf("Name: ");
+    scanf("%[^\n]", new.name);
+    printf("Price: ");
+    new.price = getDbl();
+    printf("Is the item Taxed? ");
+    new.taxed = yes();
+    printf("Quantity: ");
+    new.quantity = getIntMM(1, MAX_STOCK_NUMBER, "Quantity");
+    noOfItems++;
+    items[noOfItems] = new;
+    start("Done!");
 }
 
 void removeItem(void) {

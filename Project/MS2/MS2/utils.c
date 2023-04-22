@@ -35,7 +35,7 @@ double getDbl(void) {
          }
       } else { // user enterd non integer
          flushKey();
-         printf("Invalid Integer, try again: ");
+         printf("Invalid Double, try again: ");
       }
    }
    return value;
