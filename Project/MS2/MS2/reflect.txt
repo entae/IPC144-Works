@@ -13,3 +13,6 @@ The hardest part of ms3 for me was definitely milestone 3.5. It took a lot of ti
 
 ms4
 Milestone four was surprisingly (fairly) easy to complete compared to how much work went into milestone 3.5. Being able to reuse listItems() in the function selectItems helped make the process fairly quick. I did get an issue where the MAX_STOCK_NUMBER showed as 999 instead of 619 in my output... so I changed its value in the POS.h file in order to get the correct output for submission.
+
+ms5
+I initially started ms5 "addItems" by making individual variables and putting values in them through scanf's. Then I realized that I could take advantage of the struct Item that we had already made and just use a new instance of the struct. I realized while trying to submit that the added items could not go over the noOfItems variable, and so put the above work in an if statement to only run if the noOfItems was not equal to the MAX_NO_ITEMS. 

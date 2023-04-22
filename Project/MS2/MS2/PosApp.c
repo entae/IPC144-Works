@@ -87,7 +87,17 @@ void addItem(void) {
 }
 
 void removeItem(void) {
-   start("Remove Item");
+    int selection;
+    start("Remove Item");
+    printf("Select an item:\n");
+    listItems();
+    printf("Select row: ");
+    selection = getIntMM(1, noOfItems, "Row Number");
+    for ( ; selection < noOfItems; selection++) {
+        items[selection-1] = items[selection];
+    }
+    noOfItems--;
+    start("Done!");
 }
 
 void stockItem(void) {
