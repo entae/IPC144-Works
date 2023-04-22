@@ -82,7 +82,7 @@ void addItem(void) {
         start("Done!");
     }
     else {
-        printf("This system cannot store more than %d different Items in the inventory!\n", MAX_NO_ITEMS);
+        printf("This system cannot store more that %d different Items in the inventory!\n", MAX_NO_ITEMS);
     }
 }
 
