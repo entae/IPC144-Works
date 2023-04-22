@@ -10,3 +10,6 @@ Other than this code that allowed me to not use the <string.h> library, I am sti
 
 ms3
 The hardest part of ms3 for me was definitely milestone 3.5. It took a lot of time for me to try and understand which values were being pulled from the structure and using arrays to update values as well. There was a lot of practice with format specifying so I feel a lot more confident regarding that. I did end up using strcmp from the strings.h library to compare two strings in the int search(void) function made in ms3.4. If possible and I have some time later on, I am hoping to see if I can understand and create function like I did in ms2 where I used cpyString instead.
+
+ms4
+Milestone four was surprisingly (fairly) easy to complete compared to how much work went into milestone 3.5. Being able to reuse listItems() in the function selectItems helped make the process fairly quick. I did get an issue where the MAX_STOCK_NUMBER showed as 999 instead of 619 in my output... so I changed its value in the POS.h file in order to get the correct output for submission.
