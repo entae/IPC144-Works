@@ -77,8 +77,8 @@ void addItem(void) {
         new.taxed = yes();
         printf("Quantity: ");
         new.quantity = getIntMM(1, MAX_STOCK_NUMBER, "Quantity");
-        noOfItems++;
         items[noOfItems] = new;
+        noOfItems++;
         start("Done!");
     }
     else {
