@@ -62,12 +62,14 @@ void inventory(void) {
 }
 
 void addItem(void) {
-    start("Adding Item\n");
+    start("Adding Item");
     struct Item new;
     printf("SKU ");
     scanf("%[^\n]", new.SKU);
+    flushKey();
     printf("Name: ");
     scanf("%[^\n]", new.name);
+    flushKey();
     printf("Price: ");
     new.price = getDbl();
     printf("Is the item Taxed? ");
